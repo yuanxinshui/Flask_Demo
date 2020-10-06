@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" name="city">
+        <input type="text" name="age">
+        <input type="file" name="gender">
+        <input type="submit">
+    </form>
+
+    {% macro input() %}
+    <input type="text" value="" size="30"> {% endmacro %}
+    <h1>input 1</h1>
+    {{ input() }}
+
+    <h1>input 2</h1>
+    {{ input() }}
+
+    <hr/> {% macro input2(type,value,size)%}
+    <input type="{{type}}" value="{{value}}" size="{{size}}"> {% endmacro %}
+    <h1>input2</h1>
+    {{input2("password","",50)}}
+</body>
+
+</html>
